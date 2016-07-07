@@ -1,0 +1,63 @@
+//
+//  PrefixHeader.pch
+//  PZHCircleOfFriendsDemo
+//
+//  Created by nuomi on 16/7/7.
+//  Copyright © 2016年 nuomi. All rights reserved.
+//
+#import "Masonry.h"
+#import "Extension.h"
+#import "NSExtension.h"
+#import "UIExtension.h"
+#import "NSExtension 2.h"
+#import "YYModel.h"
+#import "UIImageView+WebCache.h"
+#import "UIImageView+MCWebImageView.h"
+#import "MCMessageView.h"
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#ifdef DEBUG
+#define MSLog(fmt,...) NSLog((@"[行号:%d]" "[函数名:%s]\n" fmt),__LINE__,__FUNCTION__,##__VA_ARGS__);
+#else
+#define MSLog(fmt,...) ;
+#endif
+
+#define screenWidth [UIScreen mainScreen].bounds.size.width
+#define screenHeight [UIScreen mainScreen].bounds.size.height
+
+#define ColorNewOranageDark      [UIColor colorWithHexadecimal:@"ec733e"]  //深橙色不常用
+#define ColorNewOranageMiddle    [UIColor colorWithHexadecimal:@"ffa200"]  //深橙色(较浅)不常用
+
+#define ColorNewOranage          [UIColor colorWithHexadecimal:@"ffc000"]
+#define ColorNewTextGrayLight    [UIColor colorWithHexadecimal:@"aaaaaa"]
+
+#define ColorNewLine             [UIColor colorWithHexadecimal:@"e5e5e5"]
+
+#define ColorNewTextGrayDark     [UIColor colorWithHexadecimal:@"666666"]
+#define ColorNewTextBlack        [UIColor colorWithHexadecimal:@"010101"]
+
+
+#define ColorNavbar              [UIColor whiteColor]
+#define ColorBaseBackground      [UIColor colorWithWhite:244.0 / 255.0 alpha:1]
+#define ColorBackground          [UIColor colorWithWhite:244.0 / 255.0 alpha:1]
+#define ColorBackgroundYellow    [UIColor colorWithRed:242.0 / 255.0 green:235.0 / 255.0 blue:200.0 / 255.0 alpha:1]
+#define ColorBackgroundPressed   [UIColor colorWithWhite:0.9 alpha:1]
+
+
+//正常字体尺寸
+#define FontRealityBig        [UIFont systemFontOfSize:21]
+#define FontRealityMiddle     [UIFont systemFontOfSize:16]
+#define FontRealityNormal     [UIFont systemFontOfSize:14]
+#define FontRealitySmall      [UIFont systemFontOfSize:12]
+#define FontRealityMin        [UIFont systemFontOfSize:10]
+
+#define WS(wSelf)          __weak typeof(self) wSelf = self
+#define SS(sSelf)          __strong typeof(wSelf) sSelf = wSelf
+
+#define DeviceSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+
+#define IOS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+#endif

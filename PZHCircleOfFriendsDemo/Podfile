@@ -1,0 +1,6 @@
+pod 'YYModel', '~> 1.0.3'
+pod 'MJRefresh', '~> 3.0.4'
+pod 'SDWebImage', '~> 3.7.3'
+pod 'Masonry', '~> 0.6.3'
+pod 'TTTAttributedLabel', '~> 1.13.4'
+pod 'MBProgressHUD'

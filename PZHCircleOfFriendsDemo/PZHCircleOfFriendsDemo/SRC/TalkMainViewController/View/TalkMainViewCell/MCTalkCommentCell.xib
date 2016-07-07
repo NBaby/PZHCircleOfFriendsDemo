@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MCTalkCommentCell" rowHeight="31" id="KGk-i7-Jjw" customClass="MCTalkCommentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="31"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4N5-E6-YvW">
+                        <rect key="frame" x="68" y="0.0" width="242" height="31"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4N5-E6-YvW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="1zv-ud-rFk"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4N5-E6-YvW" secondAttribute="trailing" constant="-8" id="8as-f9-grR"/>
+                    <constraint firstItem="4N5-E6-YvW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RIb-Kx-wZh"/>
+                    <constraint firstItem="4N5-E6-YvW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="hRn-fw-FqT"/>
+                    <constraint firstAttribute="trailing" secondItem="4N5-E6-YvW" secondAttribute="trailing" constant="10" id="lmY-dN-TP8"/>
+                    <constraint firstAttribute="bottom" secondItem="4N5-E6-YvW" secondAttribute="bottom" priority="750" id="nQ5-up-yMg"/>
+                    <constraint firstItem="4N5-E6-YvW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="68" id="wak-mt-aTI"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="1zv-ud-rFk"/>
+                        <exclude reference="8as-f9-grR"/>
+                        <exclude reference="hRn-fw-FqT"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomConstraint" destination="nQ5-up-yMg" id="QdD-fz-ldl"/>
+                <outlet property="commentView" destination="4N5-E6-YvW" id="Tqf-dP-ezb"/>
+            </connections>
+            <point key="canvasLocation" x="242" y="463.5"/>
+        </tableViewCell>
+    </objects>
+</document>
