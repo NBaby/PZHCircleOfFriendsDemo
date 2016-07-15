@@ -28,7 +28,7 @@
                         <color key="textColor" red="0.0039215686269999999" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRM-ia-kvU">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRM-ia-kvU">
                         <rect key="frame" x="138" y="308" width="80" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="9RC-J8-jfY"/>
@@ -41,8 +41,8 @@
                             <action selector="tapComment:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mzb-Tj-mfr"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lk0-0f-F2i">
-                        <rect key="frame" x="223" y="307" width="80" height="19"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lk0-0f-F2i">
+                        <rect key="frame" x="223" y="308" width="80" height="19"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="19" id="iWs-rD-NIG"/>
                             <constraint firstAttribute="width" constant="80" id="jK7-Dq-sdd"/>
@@ -56,23 +56,23 @@
                             <action selector="tapFavBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="t4N-jI-GLf"/>
                         </connections>
                     </button>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zub-Ut-isD">
-                        <rect key="frame" x="66" y="74" width="234" height="21"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zub-Ut-isD">
+                        <rect key="frame" x="66" y="75" width="234" height="21"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" priority="100" constant="21" id="yQu-Ng-WE1"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="953-2b-sq1">
-                        <rect key="frame" x="66" y="41" width="25" height="18"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="953-2b-sq1">
+                        <rect key="frame" x="66" y="42" width="25" height="18"/>
                         <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="Qyn-8f-yAj"/>
                             <constraint firstAttribute="width" priority="250" constant="25" id="d5L-FY-1jF"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVK-5a-19Y">
-                        <rect key="frame" x="68" y="335" width="252" height="65"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVK-5a-19Y">
+                        <rect key="frame" x="68" y="336" width="252" height="63"/>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffw-cZ-Qrl">
@@ -81,8 +81,8 @@
                             <action selector="tipUserAvatar:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JQt-Nr-BD3"/>
                         </connections>
                     </button>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3F-dD-sau">
-                        <rect key="frame" x="68" y="110" width="184" height="177"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3F-dD-sau">
+                        <rect key="frame" x="68" y="111" width="184" height="177"/>
                         <constraints>
                             <constraint firstAttribute="height" priority="750" constant="177" id="7OD-oT-8k8"/>
                         </constraints>

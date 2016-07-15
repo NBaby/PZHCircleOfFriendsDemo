@@ -7,9 +7,9 @@
 //
 
 #import "MCTlakLookMoreCell.h"
-//#import "MCTalkMainListModel.h"
+#import "PZHTalkDataModel.h"
 @interface MCTlakLookMoreCell(){
-//    MCTalkListDataModel * dataModel;
+    PZHTalkDataModel * dataModel;
 }
 @end
 @implementation MCTlakLookMoreCell
@@ -37,7 +37,7 @@
 }
 
 - (void)setInfo:(id)info{
-//    dataModel = info;
+    dataModel = info;
 }
 - (IBAction)lookMore:(id)sender {
 //    [self.fatherViewController tapDetailBtn:dataModel];

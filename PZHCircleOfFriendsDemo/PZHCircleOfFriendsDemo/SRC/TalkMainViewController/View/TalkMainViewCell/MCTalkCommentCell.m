@@ -7,12 +7,12 @@
 //
 
 #import "MCTalkCommentCell.h"
-//#import "MCTalkMainListModel.h"
+#import "PZHTalkDataModel.h"
 #import "TTTAttributedLabel.h"
-//#import "ReportManager.h"
+
 @interface MCTalkCommentCell()<TTTAttributedLabelDelegate,UIActionSheetDelegate>{
-//    __weak TalkCommentModel * dataModel;
-//    __weak MCTalkListDataModel * listModel;
+    TalkCommentModel * dataModel;
+    PZHListItemModel * listModel;
     
 }
 @property (weak, nonatomic) IBOutlet UIView *commentView;
@@ -35,95 +35,90 @@
     
 }
 - (void)setInfo:(id)info{
-//    return ;
-//    dataModel = [info objectForKey:@"commentModel"];
-//    listModel = [info objectForKey:@"listModel"];
-//    [self.commentView removeAllSubviews];
-//    UIImageView * avatar = [[UIImageView alloc]init];
-//    [self.commentView addSubview:avatar];
-//    [avatar sd_getUserImageWithId:dataModel.userimageid andSize:20];
-//    [avatar mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.commentView).offset(6);
-//        make.top.equalTo(self.commentView).offset(3);
-//        make.size.mas_equalTo(CGSizeMake(20, 20));
-//        make.bottom.lessThanOrEqualTo (self.commentView).offset(-3);
-//       
-//    }];
-//    UIButton * avatarBtn = [[UIButton alloc]init];
-//    [avatarBtn addTarget:self action:@selector(tapAvatar:) forControlEvents:UIControlEventTouchUpInside];
-//    [self.commentView addSubview:avatarBtn];
-//    [avatarBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.commentView).offset(0);
-//        make.width.mas_equalTo(26);
-//        make.top.equalTo(self.commentView).offset(0);
-//
-//        
-//    }];
-//    TTTAttributedLabel * textLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, 20, 0)];
-//    textLabel.extendsLinkTouchArea = NO;
-//    textLabel.font = FontRealityNormal;
-//    NSString * userName1 = dataModel.username;
-//    NSString * userName2 = dataModel.targetusername;
-//    NSString * text = dataModel.text;
-//    NSRange firstRange = NSMakeRange(0, userName1.length);
-//    NSRange secondRange;
-//    NSRange thirdRange;
-//    NSString * result = [NSString stringWithFormat:@"%@",userName1];
-//    if (userName2.length > 0) {
-//        result = [NSString stringWithFormat:@"%@ 回复 %@",result,userName2];
-//        secondRange = NSMakeRange(userName1.length+4, userName2.length);
-//    }
-//    else {
-//        secondRange = NSMakeRange(userName1.length+4, 0);
-//    }
-//    result = [NSString stringWithFormat:@"%@ :%@",result,text];
-//    thirdRange = NSMakeRange(0, result.length);
-//    textLabel.lineSpacing = 5;
-//    textLabel.preferredMaxLayoutWidth = screenWidth - 68 -30 -6-6-10;
-//    if (self.type == TalkTypeNomal) {
-//         textLabel.numberOfLines = 5;
-//    }
-//    else {
-//         textLabel.numberOfLines = 0;
-//    }
-//   
-//    
-//    textLabel.linkAttributes = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:(NSString *)kCTUnderlineStyleAttributeName];
-//    [textLabel setText:result afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
-//        
-//        UIFont *boldSystemFont = [UIFont systemFontOfSize:13];
-//        CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)boldSystemFont.fontName, boldSystemFont.pointSize, NULL);
-//        if (font) {
-//            //设置可点击文本的大小
-//            [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)font range:firstRange];
-//            [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)font range:secondRange];
-//            //设置可点击文本的颜色
-//            [mutableAttributedString addAttribute:(NSString*)kCTForegroundColorAttributeName value:(id)[[UIColor colorWithRed:62/255.0 green:81/255.0 blue:105/255.0 alpha:1] CGColor] range:firstRange];
-//            [mutableAttributedString addAttribute:(NSString*)kCTForegroundColorAttributeName value:(id)[[UIColor colorWithRed:62/255.0 green:81/255.0 blue:105/255.0 alpha:1] CGColor] range:secondRange];
-//            
-//            CFRelease(font);
-//        }
-//        return mutableAttributedString;
-//    }];
-//    textLabel.delegate = self;
-//    
-//    
-//    
-//    [textLabel addLinkToAddress:@{@"kind":@"comment",@"object":dataModel} withRange:thirdRange];
-//    [textLabel addLinkToAddress:@{@"kind":@"user",@"object":dataModel.userid} withRange:firstRange];
-//    [textLabel addLinkToAddress:@{@"kind":@"user",@"object":dataModel.targetuserid} withRange:secondRange];
-//    [self.commentView addSubview:textLabel];
-//    ///添加长按事件
-//    UILongPressGestureRecognizer * longPressGestureRecognizer =[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressGesture:)];
-//    [textLabel addGestureRecognizer:longPressGestureRecognizer];
-//    [textLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.commentView).offset(3);
-//        make.left.equalTo(avatar.mas_right).offset(5);
-//        make.right.equalTo(self.commentView).offset(-10);
-//        make.bottom.equalTo(self.commentView).offset(-3);
-//    }];
-//    
-//
+
+    dataModel = [info objectForKey:@"commentModel"];
+    listModel = [info objectForKey:@"listModel"];
+    [self.commentView removeAllSubviews];
+    UIImageView * avatar = [[UIImageView alloc]init];
+    [self.commentView addSubview:avatar];
+    [avatar sd_getUserImageWithId:dataModel.userimageid andSize:20];
+    [avatar mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.commentView).offset(6);
+        make.top.equalTo(self.commentView).offset(3);
+        make.size.mas_equalTo(CGSizeMake(20, 20));
+        make.bottom.lessThanOrEqualTo (self.commentView).offset(-3);
+       
+    }];
+    UIButton * avatarBtn = [[UIButton alloc]init];
+    [avatarBtn addTarget:self action:@selector(tapAvatar:) forControlEvents:UIControlEventTouchUpInside];
+    [self.commentView addSubview:avatarBtn];
+    [avatarBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.commentView).offset(0);
+        make.width.mas_equalTo(26);
+        make.top.equalTo(self.commentView).offset(0);
+
+        
+    }];
+    TTTAttributedLabel * textLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, 20, 0)];
+    textLabel.extendsLinkTouchArea = NO;
+    textLabel.font = FontRealityNormal;
+    NSString * userName1 = dataModel.username;
+    NSString * userName2 = dataModel.targetusername;
+    NSString * text = dataModel.text;
+    NSRange firstRange = NSMakeRange(0, userName1.length);
+    NSRange secondRange;
+    NSRange thirdRange;
+    NSString * result = [NSString stringWithFormat:@"%@",userName1];
+    if (userName2.length > 0) {
+        result = [NSString stringWithFormat:@"%@ 回复 %@",result,userName2];
+        secondRange = NSMakeRange(userName1.length+4, userName2.length);
+    }
+    else {
+        secondRange = NSMakeRange(userName1.length+4, 0);
+    }
+    result = [NSString stringWithFormat:@"%@ :%@",result,text];
+    thirdRange = NSMakeRange(0, result.length);
+    textLabel.lineSpacing = 5;
+    textLabel.preferredMaxLayoutWidth = screenWidth - 68 -30 -6-6-10;
+    if (self.type == TalkTypeNomal) {
+         textLabel.numberOfLines = 5;
+    }
+    else {
+         textLabel.numberOfLines = 0;
+    }
+   
+    
+    textLabel.linkAttributes = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:(NSString *)kCTUnderlineStyleAttributeName];
+    [textLabel setText:result afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
+        
+        UIFont *boldSystemFont = [UIFont systemFontOfSize:13];
+        CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)boldSystemFont.fontName, boldSystemFont.pointSize, NULL);
+        if (font) {
+            //设置可点击文本的大小
+            [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)font range:firstRange];
+            [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)font range:secondRange];
+            //设置可点击文本的颜色
+            [mutableAttributedString addAttribute:(NSString*)kCTForegroundColorAttributeName value:(id)[[UIColor colorWithRed:62/255.0 green:81/255.0 blue:105/255.0 alpha:1] CGColor] range:firstRange];
+            [mutableAttributedString addAttribute:(NSString*)kCTForegroundColorAttributeName value:(id)[[UIColor colorWithRed:62/255.0 green:81/255.0 blue:105/255.0 alpha:1] CGColor] range:secondRange];
+            
+            CFRelease(font);
+        }
+        return mutableAttributedString;
+    }];
+    textLabel.delegate = self;
+    [textLabel addLinkToAddress:@{@"kind":@"comment",@"object":dataModel} withRange:thirdRange];
+    [textLabel addLinkToAddress:@{@"kind":@"user",@"object":dataModel.userid} withRange:firstRange];
+    [textLabel addLinkToAddress:@{@"kind":@"user",@"object":dataModel.targetuserid} withRange:secondRange];
+    [self.commentView addSubview:textLabel];
+    ///添加长按事件
+    UILongPressGestureRecognizer * longPressGestureRecognizer =[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressGesture:)];
+    [textLabel addGestureRecognizer:longPressGestureRecognizer];
+    [textLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.commentView).offset(3);
+        make.left.equalTo(avatar.mas_right).offset(5);
+        make.right.equalTo(self.commentView).offset(-10);
+        make.bottom.equalTo(self.commentView).offset(-3);
+    }];
 }
 
 - (void)tapAvatar:(UIButton *)btn{

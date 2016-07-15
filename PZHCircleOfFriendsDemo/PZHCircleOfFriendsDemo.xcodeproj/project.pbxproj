@@ -47,6 +47,8 @@
 		314FA0DB1D2E33A200F5D19D /* UIImageView+MCWebImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FA0D71D2E33A200F5D19D /* UIImageView+MCWebImageView.m */; };
 		314FA0DF1D2E347B00F5D19D /* MCCommonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FA0DD1D2E347B00F5D19D /* MCCommonManager.m */; };
 		314FA0E21D2E386E00F5D19D /* MCMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FA0E11D2E386E00F5D19D /* MCMessageView.m */; };
+		31B3D67A1D388B7E007606A1 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31B3D6791D388B7E007606A1 /* images.xcassets */; };
+		31DACC9B1D2E4E7A005C015D /* TableViewCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DACC9A1D2E4E7A005C015D /* TableViewCacheManager.m */; };
 		C212B31D2B26A24D92C0C7F2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FF5AADCFECB6D0910C9E5E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +146,9 @@
 		314FA0DE1D2E347B00F5D19D /* NSExtension 2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSExtension 2.h"; sourceTree = "<group>"; };
 		314FA0E01D2E386E00F5D19D /* MCMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMessageView.h; sourceTree = "<group>"; };
 		314FA0E11D2E386E00F5D19D /* MCMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMessageView.m; sourceTree = "<group>"; };
+		31B3D6791D388B7E007606A1 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		31DACC991D2E4E4B005C015D /* TableViewCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCacheManager.h; sourceTree = "<group>"; };
+		31DACC9A1D2E4E7A005C015D /* TableViewCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCacheManager.m; sourceTree = "<group>"; };
 		A81150F4130653DB8DFEE5D4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D16263DB255BC8EC381DB8BE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +214,7 @@
 				312ADAAF1D2DF1A300D1D909 /* LaunchScreen.storyboard */,
 				312ADAB21D2DF1A300D1D909 /* Info.plist */,
 				312ADAA11D2DF1A300D1D909 /* Supporting Files */,
+				31B3D6791D388B7E007606A1 /* images.xcassets */,
 			);
 			path = PZHCircleOfFriendsDemo;
 			sourceTree = "<group>";
@@ -342,6 +348,8 @@
 		312ADAF41D2DF8CF00D1D909 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				31DACC9A1D2E4E7A005C015D /* TableViewCacheManager.m */,
+				31DACC991D2E4E4B005C015D /* TableViewCacheManager.h */,
 				312ADAF51D2DF8DA00D1D909 /* PZHTalkMainListManager.h */,
 				312ADAF61D2DF8DA00D1D909 /* PZHTalkMainListManager.m */,
 			);
@@ -550,6 +558,7 @@
 				312ADAE41D2DF45000D1D909 /* PZHTalkAboutMeCell.xib in Resources */,
 				314FA0B41D2E1FCB00F5D19D /* MCTalkCommentCell.xib in Resources */,
 				314FA0B61D2E1FCB00F5D19D /* MCTalkMainViewCell.xib in Resources */,
+				31B3D67A1D388B7E007606A1 /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +649,7 @@
 				314FA0CD1D2E217700F5D19D /* MJPhotoView.m in Sources */,
 				314FA0DF1D2E347B00F5D19D /* MCCommonManager.m in Sources */,
 				312ADADC1D2DF3F700D1D909 /* PZHTalkMainViewController.m in Sources */,
+				31DACC9B1D2E4E7A005C015D /* TableViewCacheManager.m in Sources */,
 				312ADAF31D2DF70C00D1D909 /* PZHCommonViewController.m in Sources */,
 				314FA0CB1D2E217700F5D19D /* MJPhotoProgressView.m in Sources */,
 				312ADAA91D2DF1A300D1D909 /* ViewController.m in Sources */,

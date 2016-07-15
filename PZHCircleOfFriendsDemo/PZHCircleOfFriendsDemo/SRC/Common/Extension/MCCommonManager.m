@@ -10,6 +10,7 @@
 
 @implementation MCCommonManager
 + (NSURL *)imageUrlHandleWithImageId:(NSString *)imageId size:(int)size square:(BOOL)square{
+
     NSString * imageSize = @"";
     int imageWidth = size * 2;
     if (square == YES) {

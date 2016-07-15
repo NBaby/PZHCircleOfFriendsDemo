@@ -14,6 +14,7 @@ typedef enum{
     TalkTopic,
     TalkDetail
 }TalkViewControllerType;
+@class PZHListItemModel,TalkCommentModel;
 @interface PZHTalkMainViewController : PZHCommonViewController
 
 ///评论框
@@ -25,10 +26,9 @@ typedef enum{
 @property (assign,nonatomic) TalkViewControllerType type;
 ///detailType
 @property (copy,nonatomic) NSString * talkDetailId;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 - (void)hideKeyBoard;
 ///点击评论按钮
-//- (void)cellTapComment:(MCTalkListDataModel *)talkListDataModel  andCommentModel:(TalkCommentModel *)talkCommentModel;
+- (void)cellTapComment:(PZHListItemModel *)talkListDataModel  andCommentModel:(TalkCommentModel *)talkCommentModel;
 ///厨说点赞
 //- (void)tapFavBtn:(BOOL)state dataModel:(MCTalkListDataModel *)modelData;
 ///点击话题
@@ -38,7 +38,7 @@ typedef enum{
 ///进入与我相关
 - (void)aboutMyself;
 ///点击头像,用户名字
-- (void)goToUserCenterWithId:(NSString *)userId;
+//- (void)goToUserCenterWithId:(NSString *)userId;
 ///清除缓存
 //- (void)clearCacheWithModel:(MCTalkListDataModel *)model;
 //- (void)clearSessionCache:(MCTalkListDataModel *)model;
