@@ -31,11 +31,8 @@
         make.bottom.equalTo(self.contentView);
         make.height.mas_equalTo(0.5);
     }];
-    
-    
 }
 - (void)setInfo:(id)info{
-
     dataModel = [info objectForKey:@"commentModel"];
     listModel = [info objectForKey:@"listModel"];
     [self.commentView removeAllSubviews];
@@ -56,11 +53,9 @@
         make.left.equalTo(self.commentView).offset(0);
         make.width.mas_equalTo(26);
         make.top.equalTo(self.commentView).offset(0);
-
-        
     }];
     TTTAttributedLabel * textLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, 20, 0)];
-    textLabel.extendsLinkTouchArea = NO;
+    textLabel.extendsLinkTouchArea = NO;//网上说设置这个可以减少点击面积，从而使滑动更流畅
     textLabel.font = FontRealityNormal;
     NSString * userName1 = dataModel.username;
     NSString * userName2 = dataModel.targetusername;
@@ -86,8 +81,6 @@
     else {
          textLabel.numberOfLines = 0;
     }
-   
-    
     textLabel.linkAttributes = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:(NSString *)kCTUnderlineStyleAttributeName];
     [textLabel setText:result afterInheritingLabelAttributesAndConfiguringWithBlock:^NSMutableAttributedString *(NSMutableAttributedString *mutableAttributedString) {
         
@@ -129,14 +122,14 @@
 
 - (void)attributedLabel:( TTTAttributedLabel *)label
 didSelectLinkWithAddress:(NSDictionary *)result{
-//    //如果点击是评论
-//    if ([result[@"kind"] isEqualToString:@"comment"]) {
-//        [self.fatherController cellTapComment:listModel andCommentModel:result[@"object"]];
-//    }
-//    ///如果是点击人物名称
-//    if ([result[@"kind"] isEqualToString:@"user"]) {
-//        [self.fatherController goToUserCenterWithId:result[@"object"]];
-//    }
+    //如果点击是评论
+    if ([result[@"kind"] isEqualToString:@"comment"]) {
+        [self.fatherController cellTapComment:listModel andCommentModel:result[@"object"]];
+    }
+    ///如果是点击人物名称
+    if ([result[@"kind"] isEqualToString:@"user"]) {
+        [self.fatherController goToUserCenterWithId:result[@"object"]];
+    }
 }
 #pragma mark - 事件响应
 ///长按事件

@@ -34,6 +34,7 @@
 @property (strong, nonatomic) TTTAttributedLabel * contentLabel;
 
 @property (weak, nonatomic) PZHTalkMainViewController *fatherController;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bigPictureViewHeight;
 
 @property (strong, nonatomic) UIView * line;

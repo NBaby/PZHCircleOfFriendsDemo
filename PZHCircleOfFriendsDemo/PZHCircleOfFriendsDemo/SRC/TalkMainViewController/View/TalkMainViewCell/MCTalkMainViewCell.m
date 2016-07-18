@@ -141,7 +141,6 @@
     [pictureArray removeAllObjects];
      picWidth = 0;
      picHeight = 0;
-    
     int rowPicCount = 1;
     float bigPicViewWidth = screenWidth - space *2;
 
@@ -179,7 +178,6 @@
         self.bigPictureViewHeight.constant = bigPicViewWidth;
         rowPicCount = 3;
     }
-    
     float x=0;
     float y =0;
     for (int i =0 ; i<[picArray count]; i++) {

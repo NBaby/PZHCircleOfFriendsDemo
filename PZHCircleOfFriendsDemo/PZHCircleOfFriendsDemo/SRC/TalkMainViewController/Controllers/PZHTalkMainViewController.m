@@ -192,7 +192,7 @@
         cell.type = self.type;
         PZHListItemModel * listModel = dataArray[indexPath.section];
         TalkCommentModel * commentModel = listModel.commentPoList[indexPath.row -1];
-        height =  [(MCTalkCommentCell *)cell getHeightWidthInfo:@{@"listModel":listModel,@"commentModel":commentModel}];
+        height = [(MCTalkCommentCell *)cell getHeightWidthInfo:@{@"listModel":listModel,@"commentModel":commentModel}];
         [tableViewHeightCache setHeightWithNSIndexPatch:indexPath andValue:@(height)];
         return height;
     }
@@ -315,7 +315,6 @@
     [_mainTableView reloadData];
     [self.mainTableView.mj_footer endRefreshing];
     [self.mainTableView.mj_header endRefreshing];
-    
   }
 - (void)talkReloadData{
     
