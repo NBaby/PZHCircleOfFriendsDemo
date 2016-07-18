@@ -14,7 +14,7 @@
 #import "PZHGrowingTextView.h"
 #import "MCTlakLookMoreCell.h"
 #import "MCTalkCommentCell.h"
-#import "MCMessageView.h"
+#import "MessageView.h"
 #import "TableViewCacheManager.h"
 @interface PZHTalkMainViewController ()<UITableViewDataSource,UITableViewDelegate,PZHGrowingTextViewDelegate,UIActionSheetDelegate>{
     NSMutableArray <PZHListItemModel *>* dataArray;
@@ -181,7 +181,6 @@
         float height;
 
             MCTalkMainViewCell * cell = [tableView MCTalkMainViewCell];
-             MSLog(@"%ld",(long)indexPath.section);
            height = [cell getHeightWidthInfo:dataArray[indexPath.section]] ;
             [tableViewHeightCache setHeightWithNSIndexPatch:indexPath andValue:@(height)];
             return height;
@@ -253,11 +252,11 @@
     }];
 }
 #pragma mark - event response
-///与我相关
+#pragma mark 与我相关
 - (void)aboutMyself {
 
 }
-///点击进入选择照片界面
+#pragma mark 点击进入选择照片界面
 - (IBAction)addTalkBtn:(id)sender {
 
 }
@@ -340,10 +339,15 @@
 #pragma mark 发送评论
 - (void)sendComment:(NSString *)content{
     if (content.length == 0 ){
-        [[MCMessageView getInstance]showMessage:@"评论内容不能为空"];
+        [[MessageView getInstance]showMessage:@"评论内容不能为空"];
         return ;
     }
-    
+     [[MessageView getInstance]showMessage:@"评论成功，后续操作省略"];
+    //访问服务器
+}
+#pragma mark 点击用户头像
+- (void)goToUserCenterWithId:(NSString *)userId{
+    [[MessageView getInstance]showMessage:@"点击了用户头像"];
 }
 #pragma mark 点击了专辑或者菜谱
 //- (void)tapCollectionOrRecipeWithModel:(MCTalkListDataModel *)model{
@@ -400,16 +404,16 @@
 
 }
 - (void)tapTopic:(NSString *)topic{
-    
-    if (self.type == TalkTopic) {
-        if ([topic isEqualToString:self.topicStr]) {
-            return ;
-        }
-    }
-    PZHTalkMainViewController * topicViewController =[self.storyboard instantiateViewControllerWithIdentifier:@"PZHTalkMainViewController"];
-    topicViewController.type = TalkTopic;
-    topicViewController.topicStr = topic;
-    [self.navigationController pushViewController:topicViewController animated:YES];
+    [[MessageView getInstance]showMessage:@"点击了主题"];
+//    if (self.type == TalkTopic) {
+//        if ([topic isEqualToString:self.topicStr]) {
+//            return ;
+//        }
+//    }
+//    PZHTalkMainViewController * topicViewController =[self.storyboard instantiateViewControllerWithIdentifier:@"PZHTalkMainViewController"];
+//    topicViewController.type = TalkTopic;
+//    topicViewController.topicStr = topic;
+//    [self.navigationController pushViewController:topicViewController animated:YES];
 }
 #pragma mark 清除缓存
 - (void)clearCache{

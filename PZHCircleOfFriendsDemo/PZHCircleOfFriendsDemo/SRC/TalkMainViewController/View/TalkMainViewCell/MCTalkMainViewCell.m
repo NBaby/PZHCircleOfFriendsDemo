@@ -13,7 +13,7 @@
 #import "UIImageView+WebCache.h"
 #import "PZHTalkDataModel.h"
 #import "PZHTalkMainListManager.h"
-#import "MCMessageView.h"
+#import "MessageView.h"
 @interface MCTalkMainViewCell ()<TTTAttributedLabelDelegate,UIActionSheetDelegate>{
     ///图片array
     NSMutableArray * pictureArray;
@@ -232,9 +232,7 @@
         MJPhoto *photo = [[MJPhoto alloc] init];
         photo.srcImageView = pictureArray[i]; // 来源于哪个UIImageView
         UIImageView * imageview = [[UIImageView alloc]init];
-//        [imageview sd_getImageWithId:imageIdArray[i] andSize:screenWidth square:NO];
-//      
-//        photo.url = [MCCommonManager imageUrlHandleWithImageId:imageIdArray[i]  size:screenWidth square:NO];
+        [imageview sd_getImageWithId:imageIdArray[i] andSize:screenWidth square:NO];
         [photos addObject:photo];
     }
     MJPhotoBrowser *browser  = [[MJPhotoBrowser alloc] init];
@@ -244,7 +242,6 @@
           browser.showDetail = YES;
     }
   
-    browser.delegate = self;
     [browser show];
 }
 #pragma mark - MJPhotoBrowserDelegate
@@ -288,21 +285,18 @@
 ///文字点击
 - (void)attributedLabel:( TTTAttributedLabel *)label
    didSelectLinkWithAddress:(NSDictionary *)result{
-//    ///如果点击是评论
-//    if ([result[@"kind"] isEqualToString:@"comment"]) {
-//        [self.fatherController cellTapComment:dataModel andCommentModel:result[@"object"]];
-//    }
-//    ///如果是话题
-//    if ([result[@"kind"]isEqualToString:@"topic"]) {
-//        [self.fatherController tapTopic:result[@"object"]];
-//    }
-//    ///如果是点击人物名称
-//    if ([result[@"kind"] isEqualToString:@"user"]) {
-//        [self.fatherController goToUserCenterWithId:result[@"object"]];
-//    }
-//    if ([result[@"kind"] isEqualToString:dataModel.contentType ]){
-//        [self.fatherController tapCollectionOrRecipeWithModel:dataModel];
-//    }
+    ///如果点击是评论
+    if ([result[@"kind"] isEqualToString:@"comment"]) {
+        [self.fatherController cellTapComment:dataModel andCommentModel:result[@"object"]];
+    }
+    ///如果是话题
+    if ([result[@"kind"]isEqualToString:@"topic"]) {
+        [self.fatherController tapTopic:result[@"object"]];
+    }
+    ///如果是点击人物名称
+    if ([result[@"kind"] isEqualToString:@"user"]) {
+        [self.fatherController goToUserCenterWithId:result[@"object"]];
+    }
 }
 #pragma mark  点击评论
 - (IBAction)tapComment:(id)sender {
@@ -310,15 +304,15 @@
 }
 #pragma mark  点赞
 - (IBAction)tapFavBtn:(UIButton *)sender {
-    [[MCMessageView getInstance]showMessage:@"点赞"];
+    [[MessageView getInstance]showMessage:@"点赞"];
 }
 ///点击主用户头像
 - (IBAction)tipUserAvatar:(id)sender {
-//   [ self.fatherController goToUserCenterWithId:dataModel.userid];
+   [ self.fatherController goToUserCenterWithId:dataModel.userid];
 }
 - (void)tapAvatar:(UIButton *)btn{
-//    TalkCommentModel * model =dataModel.commentPoList[btn.tag ];
-//    [self.fatherController goToUserCenterWithId:model.userid];
+    TalkCommentModel * model =dataModel.commentPoList[btn.tag ];
+    [self.fatherController goToUserCenterWithId:model.userid];
 }
 @end
 @implementation  UITableView(MCTalkMainViewCell)

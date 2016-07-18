@@ -38,10 +38,7 @@ typedef enum{
 ///进入与我相关
 - (void)aboutMyself;
 ///点击头像,用户名字
-//- (void)goToUserCenterWithId:(NSString *)userId;
-///清除缓存
-//- (void)clearCacheWithModel:(MCTalkListDataModel *)model;
-//- (void)clearSessionCache:(MCTalkListDataModel *)model;
+- (void)goToUserCenterWithId:(NSString *)userId;
 ///点击了专辑或者菜谱
 //- (void)tapCollectionOrRecipeWithModel:(MCTalkListDataModel *)model;
 @end

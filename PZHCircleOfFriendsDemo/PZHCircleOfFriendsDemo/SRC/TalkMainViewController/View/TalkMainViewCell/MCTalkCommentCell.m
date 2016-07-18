@@ -122,7 +122,7 @@
 }
 
 - (void)tapAvatar:(UIButton *)btn{
-//    [self.fatherController goToUserCenterWithId:dataModel.userid];
+    [self.fatherController goToUserCenterWithId:dataModel.userid];
 }
 
 #pragma mark - TTTAttributedLabelDelegate

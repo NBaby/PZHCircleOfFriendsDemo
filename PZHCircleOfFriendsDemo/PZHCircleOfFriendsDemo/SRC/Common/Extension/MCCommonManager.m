@@ -43,7 +43,7 @@
             imageSize = @"!s7";
         }
         NSString * imageUrl = [NSString stringWithFormat:@"%@%@.jpg%@",@"http://pic.ecook.cn/web/",imageId,imageSize];
-        MSLog(@"%@",imageUrl);
+       
         return [NSURL URLWithString:imageUrl];
     }
     //180 x 180 m5
@@ -75,8 +75,8 @@
         imageSize = @"!m3";
     }
     NSString * imageUrl = [NSString stringWithFormat:@"%@%@.jpg%@",@"http://pic.ecook.cn/web/",imageId,imageSize];
-     MSLog(@"%@",imageUrl);
-    //    MSLog(@"imageUrl:%@",imageUrl);
+    
+ 
     return [NSURL URLWithString:imageUrl];
 }
 + (NSString *)getStringWithArray:(NSArray *)strArray{

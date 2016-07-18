@@ -23,6 +23,8 @@
 		312ADAF01D2DF5DA00D1D909 /* PZHTalkMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 312ADAEF1D2DF5DA00D1D909 /* PZHTalkMainViewController.xib */; };
 		312ADAF31D2DF70C00D1D909 /* PZHCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 312ADAF21D2DF70C00D1D909 /* PZHCommonViewController.m */; };
 		312ADAF71D2DF8DA00D1D909 /* PZHTalkMainListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 312ADAF61D2DF8DA00D1D909 /* PZHTalkMainListManager.m */; };
+		314459191D3C731B00B4C589 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 314459181D3C731B00B4C589 /* MessageView.m */; };
+		3144591C1D3C737400B4C589 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3144591B1D3C737400B4C589 /* CircleProgressView.m */; };
 		314FA0A31D2DFC4E00F5D19D /* Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FA09E1D2DFC4E00F5D19D /* Extension.m */; };
 		314FA0A41D2DFC4E00F5D19D /* NSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FA0A01D2DFC4E00F5D19D /* NSExtension.m */; };
 		314FA0A51D2DFC4E00F5D19D /* UIExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FA0A21D2DFC4E00F5D19D /* UIExtension.m */; };
@@ -46,7 +48,6 @@
 		314FA0DA1D2E33A200F5D19D /* UIButton+SDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FA0D51D2E33A200F5D19D /* UIButton+SDWebImage.m */; };
 		314FA0DB1D2E33A200F5D19D /* UIImageView+MCWebImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FA0D71D2E33A200F5D19D /* UIImageView+MCWebImageView.m */; };
 		314FA0DF1D2E347B00F5D19D /* MCCommonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FA0DD1D2E347B00F5D19D /* MCCommonManager.m */; };
-		314FA0E21D2E386E00F5D19D /* MCMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 314FA0E11D2E386E00F5D19D /* MCMessageView.m */; };
 		31B3D67A1D388B7E007606A1 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31B3D6791D388B7E007606A1 /* images.xcassets */; };
 		31DACC9B1D2E4E7A005C015D /* TableViewCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DACC9A1D2E4E7A005C015D /* TableViewCacheManager.m */; };
 		C212B31D2B26A24D92C0C7F2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FF5AADCFECB6D0910C9E5E /* libPods.a */; };
@@ -101,6 +102,10 @@
 		312ADAF21D2DF70C00D1D909 /* PZHCommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZHCommonViewController.m; sourceTree = "<group>"; };
 		312ADAF51D2DF8DA00D1D909 /* PZHTalkMainListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZHTalkMainListManager.h; sourceTree = "<group>"; };
 		312ADAF61D2DF8DA00D1D909 /* PZHTalkMainListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZHTalkMainListManager.m; sourceTree = "<group>"; };
+		314459171D3C731B00B4C589 /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
+		314459181D3C731B00B4C589 /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
+		3144591A1D3C737400B4C589 /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
+		3144591B1D3C737400B4C589 /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
 		314FA09B1D2DFA3E00F5D19D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		314FA09D1D2DFC4E00F5D19D /* Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Extension.h; sourceTree = "<group>"; };
 		314FA09E1D2DFC4E00F5D19D /* Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Extension.m; sourceTree = "<group>"; };
@@ -144,8 +149,6 @@
 		314FA0DC1D2E347B00F5D19D /* MCCommonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCommonManager.h; sourceTree = "<group>"; };
 		314FA0DD1D2E347B00F5D19D /* MCCommonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCommonManager.m; sourceTree = "<group>"; };
 		314FA0DE1D2E347B00F5D19D /* NSExtension 2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSExtension 2.h"; sourceTree = "<group>"; };
-		314FA0E01D2E386E00F5D19D /* MCMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMessageView.h; sourceTree = "<group>"; };
-		314FA0E11D2E386E00F5D19D /* MCMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMessageView.m; sourceTree = "<group>"; };
 		31B3D6791D388B7E007606A1 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		31DACC991D2E4E4B005C015D /* TableViewCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCacheManager.h; sourceTree = "<group>"; };
 		31DACC9A1D2E4E7A005C015D /* TableViewCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCacheManager.m; sourceTree = "<group>"; };
@@ -319,8 +322,10 @@
 		312ADAE61D2DF48D00D1D909 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				314FA0E01D2E386E00F5D19D /* MCMessageView.h */,
-				314FA0E11D2E386E00F5D19D /* MCMessageView.m */,
+				3144591A1D3C737400B4C589 /* CircleProgressView.h */,
+				3144591B1D3C737400B4C589 /* CircleProgressView.m */,
+				314459171D3C731B00B4C589 /* MessageView.h */,
+				314459181D3C731B00B4C589 /* MessageView.m */,
 				312ADAE91D2DF4CC00D1D909 /* PZHCommonTableViewCell.h */,
 				312ADAEA1D2DF4CC00D1D909 /* PZHCommonTableViewCell.m */,
 				312ADAEB1D2DF4CC00D1D909 /* PZHGrowingTextView.h */,
@@ -631,12 +636,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3144591C1D3C737400B4C589 /* CircleProgressView.m in Sources */,
 				314FA0CC1D2E217700F5D19D /* MJPhotoToolbar.m in Sources */,
 				314FA0A41D2DFC4E00F5D19D /* NSExtension.m in Sources */,
 				314FA0D81D2E33A200F5D19D /* MSUIViewExt.m in Sources */,
 				314FA0B51D2E1FCB00F5D19D /* MCTalkMainViewCell.m in Sources */,
 				314FA0C71D2E217700F5D19D /* MJPhoto.m in Sources */,
 				312ADAE31D2DF45000D1D909 /* PZHTalkAboutMeCell.m in Sources */,
+				314459191D3C731B00B4C589 /* MessageView.m in Sources */,
 				314FA0CA1D2E217700F5D19D /* MJPhotoLoadingView.m in Sources */,
 				314FA0C91D2E217700F5D19D /* MJPhotoBrowser.m in Sources */,
 				314FA0B71D2E1FCB00F5D19D /* MCTlakLookMoreCell.m in Sources */,
@@ -658,7 +665,6 @@
 				314FA0B31D2E1FCB00F5D19D /* MCTalkCommentCell.m in Sources */,
 				312ADAF71D2DF8DA00D1D909 /* PZHTalkMainListManager.m in Sources */,
 				312ADAA61D2DF1A300D1D909 /* AppDelegate.m in Sources */,
-				314FA0E21D2E386E00F5D19D /* MCMessageView.m in Sources */,
 				312ADAED1D2DF4CC00D1D909 /* PZHCommonTableViewCell.m in Sources */,
 				312ADAA31D2DF1A300D1D909 /* main.m in Sources */,
 			);

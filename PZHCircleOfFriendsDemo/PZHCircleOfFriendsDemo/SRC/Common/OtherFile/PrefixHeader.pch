@@ -13,7 +13,7 @@
 #import "YYModel.h"
 #import "UIImageView+WebCache.h"
 #import "UIImageView+MCWebImageView.h"
-#import "MCMessageView.h"
+#import "MessageView.h"
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
